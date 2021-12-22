@@ -32,3 +32,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### Ruby ###
+/.jekyll-cache/
+/_site/
+Gemfile.lock
