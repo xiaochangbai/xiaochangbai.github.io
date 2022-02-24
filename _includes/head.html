@@ -1,0 +1,62 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+
+{% feed_meta %}
+
+{% if jekyll.environment == 'production' and site.google_analytics %}
+  {% include google-analytics.html %}
+{% endif %}
+
+{% if page.math %}
+  {% include mathjax.html %}
+{% endif %}
+
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans|Roboto|Roboto%20Slab|Inconsolata|Dancing%20Script|Noto%20Sans%20SC|Noto%20Sans%20TC|Noto%20Serif%20SC|Noto%20Serif%20TC|Ma%20Shan%20Zheng">
+
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/skin.css' | relative_url }}">
+
+<!-- -->
+<meta charset='utf-8'>
+<meta content='always' name='referrer'>
+<meta content='Gitee' property='og:site_name'>
+<meta content='Object' property='og:type'>
+<meta content='https://xiaochangbai.github.io/' property='og:url'>
+<meta content="{{ '/assets/images/identicon.png' | relative_url }}" itemprop='image' property='og:image'>
+<meta content='肖常柏' itemprop='name' property='og:title'>
+<meta content='肖常柏 高级Java开发工程师' property='og:description'>
+<meta content='肖常柏,Java,Spring,Dubbo,SpringCloud,Nacos,Github,Gitee,湖南,衡阳,深圳,双鱼座,帅气,阳光,程序员,Netty' name='Keywords'>
+<meta content='肖常柏 高级Java开发工程师。' itemprop='description' name='Description'>
+<meta content='pc,mobile' name='applicable-device'>
+
+
+<!-- Begin selecting skin -->
+{% unless site.skin %}
+  <script>
+    const hour = (new Date()).getHours();
+    let filename = "";
+    if (hour >= 5 && hour < 7) {
+      filename = "{{ '/assets/css/skin-sunrise.css' | relative_url }}";
+    } else if (hour >= 7 && hour < 17) {
+      filename = "{{ '/assets/css/skin-daylight.css' | relative_url }}";
+    } else if (hour >= 17 && hour < 19) {
+      filename = "{{ '/assets/css/skin-sunset.css' | relative_url }}";
+    } else {
+      filename = "{{ '/assets/css/skin-midnight.css' | relative_url }}";
+    }
+    const elem = document.createElement("link");
+    elem.setAttribute("rel", "stylesheet");
+    elem.setAttribute("type", "text/css");
+    elem.setAttribute("href", filename);
+    document.getElementsByTagName("head")[0].appendChild(elem);
+  </script>
+{% endunless %}
+<!-- End selecting skin -->
+
+<script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+{% include custom-head.html %}

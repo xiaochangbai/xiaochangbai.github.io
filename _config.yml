@@ -1,37 +1,42 @@
-# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
-
-paginate: 10 # pagination based on number of posts
-paginate_path: "page:num"
-exclude: ["README.md"] # files to exclude
-highlighter: rouge
-markdown: kramdown
-disqus: dbyll
-google_analytics: dbyll
 title: XiaoChangBai
-
-defaults:
-  -
-    scope:
-      path: "a" # empty string for all files
-    values:
-      title: XiaoChangBai
-
-description: 为往圣继绝学
-author:
-  name: XiaoChangBai
-  email: 704566072@qq.com
-  github: xiaochangbai
-  bio: 为往圣继绝学!
-  email_md5: 726351295ec82e145928582f595aa3aa
-
-rss_path: feed.xml
-categories_path: categories.html
-tags_path: tags.html
-
-# set it as url of an image
-# sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
-
-BASE_PATH:
+description: study hard and make progress every day.
+author: Xiao Chang Bai
+avatar: /assets/images/identicon.png
+email: 704566072@qq.com
 
 plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
   - jekyll-paginate
+
+paginate: 10
+
+# Uncomment the below line and set the tracking ID for enabling Google Analytics
+# 
+# google_analytics: 
+
+# Uncomment the below lines and set the Disqus shortname for enabling Disqus
+# 
+# disqus:
+
+# Jekyll
+# ======
+exclude:
+  - scripts/
+  - README.md
+  - jekyll-theme-hamilton.gemspec
+
+# Jekyll SEO Tag (Optional)
+# =========================
+#twitter:
+#  username: ngzhio
+#  card: summary
+logo: /assets/images/identicon.png
+social:
+  name: Xiao Chang Bai
+  links:
+    - https://gitee.com/xiaochangbai
+    - https://github.com/xiaochangbai
+google_site_verification: u4WXQl0Eu66rsQo2kRdCNx
+lang: en
